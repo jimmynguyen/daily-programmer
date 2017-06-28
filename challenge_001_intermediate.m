@@ -2,6 +2,7 @@
 %
 % https://www.reddit.com/r/dailyprogrammer/comments/pihtx/intermediate_challenge_1/
 function challenge_001_intermediate
+	warning off;
 	events = struct([]);
 	is_terminated = false;
 	window_type = 'home';
@@ -23,6 +24,8 @@ function challenge_001_intermediate
 	fprintf('\n==================================================\n');
 	fprintf('Program Terminated...\n\n');
 
+	warning on;
+
 function [options, events, window_type, message] = show_window(window_type, events, message)
 	print_header;
 	switch window_type
@@ -34,24 +37,29 @@ function [options, events, window_type, message] = show_window(window_type, even
 			options = {};
 			window_type = 'home';
 			message = sprintf('Added event \"%s\" successfully', event.name);
-		case 'edit'
-			events = print_events(events, false);
-
-			selected_event = input('    Choose: ');
-		case 'delete'
-			events = print_events(events, false);
+		case { 'edit', 'delete' }
+			events = print_events(events);
 			if ~isempty(message)
 				fprintf('    %s\n\n', message);
 				message = '';
 			end
 			selected_event = input('    Choose: ');
-			[events, event, message] = delete_event(events, selected_event);
+			if strcmp(window_type, 'edit')
+				[events, event, message] = edit_event(events, selected_event);
+			else
+				[events, event, message] = delete_event(events, selected_event);
+			end
 			options = {};
 			if isempty(message)
+				if isstruct(event)
+					if strcmp(window_type, 'edit')
+						ending = 'ed';
+					else
+						ending = 'd';
+					end
+					message = sprintf('%s%s event "%s" successfully', capitalize(window_type), ending, event.name);
+				end
 				window_type = 'home';
-				message = sprintf('Deleted event \"%s\% successfully', event.name);
-			else
-				window_type = 'edit';
 			end
 		case 'home'
 			events = print_events(events, true);
@@ -69,14 +77,29 @@ function [window_type, message, is_terminated] = select_option(options, selected
 		message = '';
 	end
 
-function [events, event, message] = delete_event(events, selected_event)
-	if ~isnumeric(selected_event) || selected_event > length(events)
+function [events, event, message] = edit_event(events, selected_event)
+	event = [];
+	if ~isnumeric(selected_event) || selected_event > length(events) + 1
 		message = 'Please enter a valid event number!';
-		event = [];
 	else
 		message = '';
-		event = events(selected_event);
-		events(selected_event) = [];
+		if selected_event <= length(events)
+			events(selected_event).name = input('    Event Name        : ', 's');
+			events(selected_event).time = input('    Event Time (XX:XX): ', 's');
+			event = events(selected_event);
+		end
+	end
+
+function [events, event, message] = delete_event(events, selected_event)
+	event = [];
+	if ~isnumeric(selected_event) || selected_event > length(events) + 1
+		message = 'Please enter a valid event number!';
+	else
+		message = '';
+		if selected_event <= length(events)
+			event = events(selected_event);
+			events(selected_event) = [];
+		end
 	end
 
 function print_header
@@ -86,7 +109,11 @@ function print_header
 	fprintf('Event Tracker\n');
 	fprintf('==================================================\n\n');
 
-function events = print_events(events, is_menu)
+function events = print_events(events, varargin)
+	is_menu = false;
+	if nargin >= 2
+		is_menu = varargin{1};
+	end
 	if isempty(events)
 		fprintf('    You have no events!\n');
 	else
@@ -95,16 +122,26 @@ function events = print_events(events, is_menu)
 
 		for i = 1:length(events)
 			if is_menu
-				print_event(events(i), char(i + 'a' - 1));
+				print_event(events(i));
 			else
 				print_event(events(i), num2str(i));
 			end
 		end
+
+		if ~is_menu
+			fprintf('    %d: Go back to menu\n', length(events)+1);
+		end
+
 	end
 	fprintf('\n');
 
-function print_event(event, event_number)
-	fprintf('    %s: %s - %s\n', event_number, event.time, event.name);
+function print_event(event, varargin)
+	if nargin == 2
+		event_number = varargin{1};
+		fprintf('    %s: %s - %s\n', event_number, event.time, event.name);
+	else
+		fprintf('    %s - %s\n', event.time, event.name);
+	end
 
 function options = print_menu(events)
 	options = print_menu_option('    %d: %s Event\n', 'add', {});
