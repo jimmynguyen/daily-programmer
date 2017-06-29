@@ -2,7 +2,7 @@
 
 Solutions to challenges from [/r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/)
 
-| Challenge # | Difficulty | Status | Programming Language | Solution |
+| Challenge # | Difficulty | Status | Technology | Solution |
 | :---------: | ---------- | ------ | -------------------- | :------: |
 | [001](https://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/)                                   | Easy         | Completed | [MATLAB](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/) | [View](https://github.com/jimmynguyen/daily-programmer/blob/master/challenge_001_easy.m)         |
 | [001](https://www.reddit.com/r/dailyprogrammer/comments/pihtx/intermediate_challenge_1/)                           | Intermediate | Completed | [MATLAB](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/) | [View](https://github.com/jimmynguyen/daily-programmer/blob/master/challenge_001_intermediate.m) |
