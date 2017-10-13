@@ -7,7 +7,7 @@
 % =============================================================================
 % your name is (blank), you are (blank) years old, and your username is (blank)
 % =============================================================================
-% 
+%
 % Bonus:
 %     For extra credit, have the program log this information in a file to be
 % accessed later.
@@ -21,7 +21,7 @@ function c001e
 	username = input('Reddit Username: ', 's');
 
 	% format the output string
-	output   = sprintf('your name is %s, you are %s years old, and your username is %s\n', name, age, username);
+	output = sprintf('your name is %s, you are %s years old, and your username is %s\n', name, age, username);
 
 	% print the output string
 	fprintf('\n%s\n', output);
