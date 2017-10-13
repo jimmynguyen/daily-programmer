@@ -1,4 +1,4 @@
-% Solution to /r/dailyprogrammer Challenge #1 Easy
+% Solution to /r/dailyprogrammer Challenge %1 Easy
 % Jimmy Nguyen
 %
 % Prompt:
@@ -14,8 +14,8 @@
 %
 % Link to challenge:
 %     https://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/
-function c001e
-	% ask for the user's information
+function c001e()
+	% ask for user's information
 	name     = input('Name: ', 's');
 	age      = input('Age : ', 's');
 	username = input('Reddit Username: ', 's');

@@ -2,7 +2,11 @@
 
 Solutions to challenges from [/r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/)
 
-| Challenge # | Difficulty | Status | Technology           | Solution | Notes |
+| #   | Difficulty | Octave | Java | Python | C++ |
+| :-: | ---------- | ------ | ---- | ------ | --- |
+| [001](https://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/) | Easy | [c001e.m](https://github.com/jimmynguyen/daily-programmer/blob/master/octave/c001e.m) | [c001e.java](https://github.com/jimmynguyen/daily-programmer/blob/master/java/c001e.java) | [c001e.py](https://github.com/jimmynguyen/daily-programmer/blob/master/java/c001e.py) | |
+
+<!-- | Challenge # | Difficulty | Status | Technology           | Solution | Notes |
 | :---------: | ---------- | ------ | -------------------- | :------: | ----- |
 | [001](https://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/)                                   | Easy         | Completed | [MATLAB](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/) | [View](https://github.com/jimmynguyen/daily-programmer/blob/master/challenge_001_easy.m)         | |
 | [001](https://www.reddit.com/r/dailyprogrammer/comments/pihtx/intermediate_challenge_1/)                           | Intermediate | Completed | [MATLAB](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/) | [View](https://github.com/jimmynguyen/daily-programmer/blob/master/challenge_001_intermediate.m) | |
@@ -24,4 +28,4 @@ Solutions to challenges from [/r/dailyprogrammer](https://www.reddit.com/r/daily
 | [333](https://www.reddit.com/r/dailyprogrammer/comments/72ivih/20170926_challenge_333_easy_packet_assembler/)      | Easy         | Completed | [MATLAB](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/) | [View](https://github.com/jimmynguyen/daily-programmer/blob/master/challenge_333_easy.m)         | |
 | [333](https://www.reddit.com/r/dailyprogrammer/comments/72ivih/20170926_challenge_333_easy_packet_assembler/)      | Easy         | Completed | [Java](https://www.java.com/en/)                                                                        | [View](https://github.com/jimmynguyen/daily-programmer/blob/master/Challenge333Easy.java)        | |
 | [334](https://www.reddit.com/r/dailyprogrammer/comments/748ba7/20171004_challenge_334_intermediate_carpet/)        | Intermediate | Completed | [MATLAB](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/) | [View](https://github.com/jimmynguyen/daily-programmer/blob/master/challenge_334_intermediate.m) | |
-| [335](https://www.reddit.com/r/dailyprogrammer/comments/759fha/20171009_challenge_335_easy_consecutive_distance/)  | Easy         | Completed | [MATLAB](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/) | [View](https://github.com/jimmynguyen/daily-programmer/blob/master/challenge_335_easy.m)         | |
+| [335](https://www.reddit.com/r/dailyprogrammer/comments/759fha/20171009_challenge_335_easy_consecutive_distance/)  | Easy         | Completed | [MATLAB](https://www.mathworks.com/products/matlab.html)/[Octave](https://www.gnu.org/software/octave/) | [View](https://github.com/jimmynguyen/daily-programmer/blob/master/challenge_335_easy.m)         | | -->
