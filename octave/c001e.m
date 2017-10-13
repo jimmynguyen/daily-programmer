@@ -27,6 +27,9 @@ function c001e
 	fprintf('\n%s\n', output);
 
 	% save the output string to a file
+	saveToFile(output);
+
+function saveToFile(output)
 	fh = fopen('info.log', 'a');
 	fprintf(fh, output);
 	fclose(fh);
