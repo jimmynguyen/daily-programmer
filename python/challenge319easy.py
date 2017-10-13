@@ -1,7 +1,7 @@
 # /r/dailyprogrammer challenge #319 - easy
 #
 # https://www.reddit.com/r/dailyprogrammer/comments/6grwny/20170612_challenge_319_easy_condensing_sentences/
-def challenge_319_easy(sentence):
+def challenge319easy(sentence):
 	words = sentence.split(' ')
 	output_words = []
 	for i in range(len(words)-1):

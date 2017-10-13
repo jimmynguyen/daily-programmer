@@ -9,7 +9,7 @@ import java.util.List;
  *
  * https://www.reddit.com/r/dailyprogrammer/comments/6y19v2/20170904_challenge_330_easy_surround_the_circles/
  */
-public class Challenge330Easy {
+public class challenge330easy {
 	public static void main(String[] args) {
 		Rectangle rectangle;
 		List<String> lines = readFile(args[0]);

@@ -11,7 +11,7 @@ import java.util.Map;
  *
  * https://www.reddit.com/r/dailyprogrammer/comments/72ivih/20170926_challenge_333_easy_packet_assembler/
  */
-public class Challenge333Easy {
+public class challenge333easy {
 	public static void main(String[] args) {
 		Map<String, Message> map = new HashMap<String, Message>();
 		List<String> lines = readFile(args[0]);
