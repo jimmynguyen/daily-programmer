@@ -19,17 +19,15 @@
 #include <fstream>
 #include <iostream>
 
-// define prototypes
-void c001e();
-void saveToFile(char* output);
-
-// main function
-int main(int argc, char *argv[]) {
-	c001e();
-	return 0;
+void saveToFile(char* output) {
+	std::ofstream file;
+	file.open("info.log", std::ios::app);
+	file << output;
+	file.close();
+	std::cout << "Your information has been saved in the file \"info.log\" in the current directory" << std::endl;
 }
 
-void c001e() {
+int main(int argc, char *argv[]) {
 	// ask for the user's information
 	std::string name, age, username;
 	std::cout << "Name: ";
@@ -48,12 +46,6 @@ void c001e() {
 
 	// save the output string to a file
 	saveToFile(output);
-}
 
-void saveToFile(char* output) {
-	std::ofstream file;
-	file.open("info.log", std::ios::app);
-	file << output;
-	file.close();
-	std::cout << "Your information has been saved in the file \"info.log\" in the current directory" << std::endl;
+	return 0;
 }

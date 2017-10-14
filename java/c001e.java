@@ -23,23 +23,12 @@ import java.util.Scanner;
 
 public final class c001e {
 	private static Scanner scanner;
-	public static void main(String[] args) {
-		scanner = new Scanner(System.in);
 
-		// ask for the user's information
-		String name     = input("Name: ");
-		String age      = input("Age : ");
-		String username = input("Reddit Username: ");
-
-		// format the output string
-		String output = String.format("your name is %s, you are %s years old, and your username is %s", name, age, username);
-
-		// print the output string
-		System.out.println("\n" + output + "\n");
-
-		// save the output string to a file
-		saveToFile(output);
+	private static String input(String prompt) {
+		System.out.print(prompt);
+		return scanner.nextLine();
 	}
+
 	private static void saveToFile(String output) {
 		BufferedWriter bufferedWriter = null;
 		try {
@@ -60,8 +49,22 @@ public final class c001e {
 			}
 		}
 	}
-	private static String input(String prompt) {
-		System.out.print(prompt);
-		return scanner.nextLine();
+
+	public static void main(String[] args) {
+		scanner = new Scanner(System.in);
+
+		// ask for the user's information
+		String name     = input("Name: ");
+		String age      = input("Age : ");
+		String username = input("Reddit Username: ");
+
+		// format the output string
+		String output = String.format("your name is %s, you are %s years old, and your username is %s", name, age, username);
+
+		// print the output string
+		System.out.println("\n" + output + "\n");
+
+		// save the output string to a file
+		saveToFile(output);
 	}
 }
