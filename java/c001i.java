@@ -71,7 +71,7 @@ public final class c001i {
 		return scanner.nextLine();
 	}
 
-	private static void addEvents() {
+	private static void addEvent() {
 		printEvents();
 		System.out.printf("\n\t>> add event <<\n\n");
 		Event event = new Event();
@@ -81,7 +81,7 @@ public final class c001i {
 		Collections.sort(events, Comparator.comparing(Event::getTime));
 	}
 
-	private static void editEvents() {
+	private static void editEvent() {
 		printEvents();
 		System.out.printf("\n\t>> edit event <<\n\n");
 		int i = Integer.valueOf(input(String.format("\tevent number: ")))-1;
@@ -92,7 +92,7 @@ public final class c001i {
 		Collections.sort(events, Comparator.comparing(Event::getTime));
 	}
 
-	private static void deleteEvents() {
+	private static void deleteEvent() {
 		printEvents();
 		System.out.printf("\n\t>> delete event <<\n\n");
 		int i = Integer.valueOf(input(String.format("\tevent number: ")))-1;
@@ -108,11 +108,11 @@ public final class c001i {
 			printOptions();
 			command = input(String.format("\n\n\t>> "));
 			if ("a".equals(command)) {
-				addEvents();
+				addEvent();
 			} else if ("e".equals(command)) {
-				editEvents();
+				editEvent();
 			} else if ("d".equals(command)) {
-				deleteEvents();
+				deleteEvent();
 			}
 		}
 	}
