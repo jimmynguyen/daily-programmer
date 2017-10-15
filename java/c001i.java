@@ -32,18 +32,6 @@ public final class c001i {
 		}
 	}
 
-	private static void printEvents() {
-		System.out.printf("\n==================================================\n");
-		if (events.isEmpty()) {
-			System.out.printf("\n\tNo events found\n");
-		} else {
-			for (int i = 0; i < events.size(); i++) {
-				printEvent(toString(i+1, events.size()), events.get(i));
-			}
-		}
-		System.out.printf("\n\t-------------------------\n");
-	}
-
 	private static String toString(int val, int max_val) {
 		String val_str = "";
 		for (int i = 0; i < String.valueOf(max_val).length() - String.valueOf(val).length(); i++) {
@@ -55,6 +43,18 @@ public final class c001i {
 
 	private static void printEvent(String event_number, Event event) {
 		System.out.printf("\n\t%s: %s - %s", event_number, event.time, event.name);
+	}
+
+	private static void printEvents() {
+		System.out.printf("\n==================================================\n");
+		if (events.isEmpty()) {
+			System.out.printf("\n\tNo events found\n");
+		} else {
+			for (int i = 0; i < events.size(); i++) {
+				printEvent(toString(i+1, events.size()), events.get(i));
+			}
+		}
+		System.out.printf("\n\t-------------------------\n");
 	}
 
 	private static void printOptions() {
