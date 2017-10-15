@@ -19,6 +19,13 @@
 #include <fstream>
 #include <iostream>
 
+std::string input(std::string prompt) {
+	std::string input;
+	std::cout << prompt;
+	std::getline(std::cin, input);
+	return input;
+}
+
 void saveToFile(char* output) {
 	std::ofstream file;
 	file.open("info.log", std::ios::app);
@@ -29,13 +36,9 @@ void saveToFile(char* output) {
 
 int main(int argc, char *argv[]) {
 	// ask for the user's information
-	std::string name, age, username;
-	std::cout << "Name: ";
-	std::getline(std::cin, name);
-	std::cout << "Age : ";
-	std::getline(std::cin, age);
-	std::cout << "Reddit Username: ";
-	std::getline(std::cin, username);
+	std::string name     = input("Name: ");
+	std::string age      = input("Age : ");
+	std::string username = input("Reddit Username: ");
 
 	// format the output string
 	char output [100];
