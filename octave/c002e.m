@@ -50,6 +50,6 @@ function prompt_and_compute(desired_variable)
 		otherwise
 			output = input1 .* input2;
 	end
-	fprintf('\n\t%s = %0.2f', desired_variable, output);
+	fprintf('\n\t%s = %.2f', desired_variable, output);
 	fprintf('\n\n\tPress ENTER to go back to the menu...');
 	input('');
