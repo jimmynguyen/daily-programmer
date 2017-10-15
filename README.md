@@ -5,7 +5,7 @@ Solutions to challenges from [/r/dailyprogrammer](https://www.reddit.com/r/daily
 | #   | Difficulty | Octave | Java | Python | C++ |
 | :-: | ---------- | ------ | ---- | ------ | --- |
 | [001](https://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/)         | Easy         | [c001e.m](https://github.com/jimmynguyen/daily-programmer/blob/master/octave/c001e.m) | [c001e.java](https://github.com/jimmynguyen/daily-programmer/blob/master/java/c001e.java) | [c001e.py](https://github.com/jimmynguyen/daily-programmer/blob/master/python/c001e.py) | [c001e.cpp](https://github.com/jimmynguyen/daily-programmer/blob/master/c++/c001e.cpp) |
-| [001](https://www.reddit.com/r/dailyprogrammer/comments/pihtx/intermediate_challenge_1/) | Intermediate | [c001i.m](https://github.com/jimmynguyen/daily-programmer/blob/master/octave/c001i.m) | [c001i.java](https://github.com/jimmynguyen/daily-programmer/blob/master/java/c001i.java) | | |
+| [001](https://www.reddit.com/r/dailyprogrammer/comments/pihtx/intermediate_challenge_1/) | Intermediate | [c001i.m](https://github.com/jimmynguyen/daily-programmer/blob/master/octave/c001i.m) | [c001i.java](https://github.com/jimmynguyen/daily-programmer/blob/master/java/c001i.java) | [c001i.py](https://github.com/jimmynguyen/daily-programmer/blob/master/python/c001i.py) | |
 
 <!-- | Challenge # | Difficulty | Status | Technology           | Solution | Notes |
 | :---------: | ---------- | ------ | -------------------- | :------: | ----- |
