@@ -25,14 +25,14 @@ function c001i()
 				guesses = {min_val, 'l'};
 			end
 			guesses = [guesses; {guess, 'h'}];
-			[hi, lo] = getMostRecentHighAndLowGuesses(guesses)
+			[hi, lo] = getMostRecentHighAndLowGuesses(guesses);
 			guess = computeGuess(hi, lo);
 		elseif any(strcmpi({'l', 'low'}, answer))
 			if isempty(guesses)
 				guesses = {max_val, 'h'};
 			end
 			guesses = [guesses; {guess, 'l'}];
-			[hi, lo] = getMostRecentHighAndLowGuesses(guesses)
+			[hi, lo] = getMostRecentHighAndLowGuesses(guesses);
 			guess = computeGuess(hi, lo);
 		end
 	end
