@@ -1,4 +1,4 @@
-% Solution to /r/dailyprogrammer Challenge %1 Easy
+% Solution to /r/dailyprogrammer Challenge #1 Easy
 % Jimmy Nguyen
 %
 % Prompt:
