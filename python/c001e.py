@@ -35,5 +35,5 @@ def saveToFile(output):
 	fh.close()
 	print('Your information has been saved in the file "info.log" in the current directory\n')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 	c001e()
