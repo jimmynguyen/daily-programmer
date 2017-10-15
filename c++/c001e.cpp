@@ -19,14 +19,16 @@
 #include <fstream>
 #include <iostream>
 
-std::string input(std::string prompt) {
+std::string input(std::string prompt)
+{
 	std::string input;
 	std::cout << prompt;
 	std::getline(std::cin, input);
 	return input;
 }
 
-void saveToFile(char* output) {
+void saveToFile(char* output)
+{
 	std::ofstream file;
 	file.open("info.log", std::ios::app);
 	file << output;
@@ -34,7 +36,8 @@ void saveToFile(char* output) {
 	std::cout << "Your information has been saved in the file \"info.log\" in the current directory" << std::endl;
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 	// ask for the user's information
 	std::string name     = input("Name: ");
 	std::string age      = input("Age : ");
