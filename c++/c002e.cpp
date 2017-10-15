@@ -1,14 +1,15 @@
 /*
- * Solution to /r/dailyprogrammer Challenge #1 Hard
+ * Solution to /r/dailyprogrammer Challenge #2 Easy
  * Jimmy Nguyen
  *
  * Prompt:
- *     Create a program that will guess numbers between 1 and 100, and respond
- * appropriately based on whether the users say that number is too high or too
- * low
+ *     Create a calculator program that can compute a formula: F = M * A
+ *
+ * Bonus:
+ *     For extra credit, the program should also be able to compute M and A
  *
  * Link to challenge:
- *     https://www.reddit.com/r/dailyprogrammer/comments/pii6j/difficult_challenge_1/
+ *     https://www.reddit.com/r/dailyprogrammer/comments/pjbj8/easy_challenge_2/
  */
 #include <iostream>
 #include <math.h>
