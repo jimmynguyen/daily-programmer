@@ -1,6 +1,6 @@
 + Source: https://github.com/tech-no-crat/Cadventure-txt/blob/master/example.story
 
-@ STARTasdf
+@ START
 > An army of zombies is approaching your house. What will you do?
 - B - LEAVE FROM THE BACK DOOR - BACK_DOOR
 - F - LEAVE FROM THE FRONT DOOR - FRONT_DOOR
@@ -29,7 +29,6 @@
 @ KNIFE
 > The zombies are too many.
 = DIE
-
 
 @ SHOTGUN
 > You take the shotgun.
