@@ -13,30 +13,29 @@
 % Link to challenge:
 %     https://www.reddit.com/r/dailyprogrammer/comments/pjbuj/intermediate_challenge_2/
 function c002i(file_name)
-	start_path_id = '@ START';
 	paths = read_story(file_name);
 	fprintf('\n==================================================\n');
-	name = input(sprintf('\n\t> What is your name?\n\t> '), 's');
-	fprintf('\n\t> Welcome %s! Let the adventure begin...\n', name);
+	name = input(sprintf('\n> What is your name?\n> '), 's');
+	fprintf('\n> Welcome %s! Let the adventure begin...\n', name);
 	is_terminate = false;
 	while ~is_terminate
-		path = get_path(paths, start_path_id);
+		path = get_path(paths, '@ START');
 		while ~isempty(path.options) || ~isempty(path.next_path_id)
 			if ~isempty(path.description)
-				fprintf('\n\t%s', path.description);
+				fprintf('\n%s', path.description);
 			end
 			if ~isempty(path.options)
 				options = parse_options(path.options);
 				key = '';
 				while ~any(strcmpi(key, {options.key}))
 					for i = 1:length(path.options)
-						fprintf('\n\t%s', path.options{i});
+						fprintf('\n%s', path.options{i});
 					end
-					key = input(sprintf('\n\n\t> '), 's');
+					key = input(sprintf('\n\n> '), 's');
 					if any(strcmpi(key, {options.key}))
 						path = get_path(paths, options(strcmpi(key, {options.key})).path_id);
 					else
-						fprintf('\n\t> Invalid option. Please select one of the following options:');
+						fprintf('\n> Invalid option. Please select one of the following options:');
 					end
 				end
 			else
@@ -44,11 +43,11 @@ function c002i(file_name)
 				path = get_path(paths, path.next_path_id);
 			end
 		end
-		fprintf('\n\t%s', path.description);
-		command = input(sprintf('\n\t> Do you want to start over? (y|n)\n\t> '), 's');
+		fprintf('\n%s', path.description);
+		command = input(sprintf('\n> Do you want to start over? (y|n)\n> '), 's');
 		while ~any(strcmpi(command, {'y', 'n'}))
-			fprintf('\n\t> Invalid option. Please enter a valid option:');
-			command = input(sprintf('\n\t> Do you want to start over? (y|n)\n\t> '), 's');
+			fprintf('\n> Invalid option. Please enter a valid option:');
+			command = input(sprintf('\n> Do you want to start over? (y|n)\n> '), 's');
 		end
 		if strcmpi(command, 'n')
 			is_terminate = true;
@@ -56,6 +55,9 @@ function c002i(file_name)
 	end
 
 function paths = read_story(file_name)
+	if ~exist(file_name, 'file')
+		error('File does not exist');
+	end
 	fh = fopen(file_name);
 	file = textscan(fh, '%s', 'Delimiter', '\n');
 	file = file{1};
@@ -76,11 +78,15 @@ function path = get_path(paths, path_id)
 	if path_id(1) ~= '@'
 		path_id = sprintf('@ %s', path_id);
 	end
+	path = [];
 	for i = 1:length(paths)
 		if strcmpi(paths{i, 1}, path_id)
 			path = parse_path_lines(paths{i, 2});
 			break;
 		end
+	end
+	if isempty(path)
+		error('Error in .story file. Path "%s" not found', path_id(3:end));
 	end
 
 function path = parse_path_lines(path_lines)
@@ -88,7 +94,7 @@ function path = parse_path_lines(path_lines)
 	for i = 1:length(path_lines)
 		switch path_lines{i}(1)
 			case '>'
-				path.description = sprintf('%s%s\n\t', path.description, path_lines{i});
+				path.description = sprintf('%s%s\n', path.description, path_lines{i});
 			case '-'
 				path.options{end+1} = path_lines{i};
 			case '='
