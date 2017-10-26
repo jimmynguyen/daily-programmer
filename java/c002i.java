@@ -25,7 +25,6 @@ import java.util.Map;
 import java.util.List;
 import java.util.Scanner;
 
-
 public final class c002i {
 	private static final String START_PATH_ID = "START";
 	private static Scanner scanner;
