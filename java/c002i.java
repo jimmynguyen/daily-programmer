@@ -1,15 +1,18 @@
 /*
- * Solution to /r/dailyprogrammer Challenge #2 Easy
+ * Solution to /r/dailyprogrammer Challenge #2 Intermediate
  * Jimmy Nguyen
  *
  * Prompt:
- *     Create a calculator program that can compute a formula: F = M * A
+ *     Create a short text adventure that will call the user by their name. The
+ * text adventure should use standard text adventure commands ("l, n, s, e, i,
+ * etc.")
  *
  * Bonus:
- *     For extra credit, the program should also be able to compute M and A
+ *     For extra credit, make sure the program does not fault, quit, glitch,
+ * fail, or loop no matter what is put in, even empty text or spaces
  *
  * Link to challenge:
- *     https://www.reddit.com/r/dailyprogrammer/comments/pjbj8/easy_challenge_2/
+ *     https://www.reddit.com/r/dailyprogrammer/comments/pjbuj/intermediate_challenge_2/
  */
 import java.io.File;
 import java.io.FileNotFoundException;
