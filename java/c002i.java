@@ -41,7 +41,7 @@ public final class c002i {
 		}
 		public void add_option(String line) {
 			String[] parts = line.split(" - ", 3);
-			String key = parts[0].replaceAll("^(-| )+", "");
+			String key = parts[0].replaceAll("^(-| )+", "").toLowerCase();
 			String description = parts[1].trim();
 			String path_id = parts[2].trim();
 			this.options.put(key, new Option(key, description, path_id, line));
@@ -119,7 +119,7 @@ public final class c002i {
 		Map<String, Option> options = path.options;
 		while (!options.containsKey(key)) {
 			path.print_options();
-			key = input(String.format("\n\n> "));
+			key = input(String.format("\n\n> ")).toLowerCase();
 			if (options.containsKey(key))
 				path = paths.get(path.options.get(key).path_id);
 			else
@@ -133,7 +133,7 @@ public final class c002i {
 		String command = null;
 		while (null == command || !Arrays.asList("y", "n").contains(command.toLowerCase())) {
 			if (null != command)
-				System.out.printf("\n> Invalid option. Please enter a valid option:");
+				System.out.printf("\n> Invalid option. Please enter a valid option.\n");
 			command = input(String.format("\n> Do you want to start over? (y|n)\n> "));
 		}
 		if ("n".equals(command.toLowerCase()))
