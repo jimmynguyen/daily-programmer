@@ -132,12 +132,12 @@ public final class c002i {
 	private static boolean prompt_termination() {
 		boolean is_terminate = false;
 		String command = null;
-		while (null == command || !Arrays.asList("y", "n").contains(command.toLowerCase())) {
+		while (null == command || !Arrays.asList("y", "n").contains(command)) {
 			if (null != command)
 				System.out.printf("\n> Invalid option. Please enter a valid option.\n");
-			command = input(String.format("\n> Do you want to start over? (y|n)\n> "));
+			command = input(String.format("\n> Do you want to start over? (y|n)\n> ")).toLowerCase();
 		}
-		if ("n".equals(command.toLowerCase()))
+		if ("n".equals(command))
 			is_terminate = true;
 		return is_terminate;
 	}
