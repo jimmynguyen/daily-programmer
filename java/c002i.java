@@ -85,7 +85,6 @@ public final class c002i {
 		validate_file(file_name);
 		List<String> lines = Files.readAllLines(Paths.get(file_name));
 		Map<String, Path> paths = new HashMap<String, Path>();
-		String path_id = null;
 		Path path = null;
 		for (String line : lines) {
 			if (!line.isEmpty()) {
