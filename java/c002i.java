@@ -128,7 +128,7 @@ public final class c002i {
 		return path;
 	}
 
-	private static boolean is_terminate() {
+	private static boolean prompt_termination() {
 		boolean is_terminate = false;
 		String command = null;
 		while (null == command || !Arrays.asList("y", "n").contains(command.toLowerCase())) {
@@ -156,7 +156,7 @@ public final class c002i {
 					path = paths.get(path.next_path_id);
 			}
 			path.print_description();
-			is_terminate = is_terminate();
+			is_terminate = prompt_termination();
 		}
 	}
 }
