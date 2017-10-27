@@ -124,7 +124,7 @@ public final class c002i {
 			if (options.containsKey(key))
 				path = paths.get(path.options.get(key).path_id);
 			else
-				System.out.printf("\n> Invalid option. Please select one of the following options:");
+				System.out.printf("\n> Invalid option. Please select one of the following options:\n");
 		}
 		return path;
 	}

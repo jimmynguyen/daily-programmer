@@ -92,7 +92,7 @@ function path = get_next_path(paths, path)
 		if any(strcmpi(key, {options.key}))
 			path = get_path(paths, options(strcmpi(key, {options.key})).path_id);
 		else
-			fprintf('\n> Invalid option. Please select one of the following options:');
+			fprintf('\n> Invalid option. Please select one of the following options:\n');
 		end
 	end
 
