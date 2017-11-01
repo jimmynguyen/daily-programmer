@@ -14,23 +14,30 @@
 %
 % Link to challenge:
 %     https://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/
-function c001e()
-	% ask for user's information
+function output = c001e(varargin)
+	if nargin < 3
+		[name, age, username] = prompt_user();
+	else
+		[name, age, username] = deal(varargin{1}, varargin{2}, varargin{3});
+	end
+	output = print_and_save(name, age, username);
+
+function [name, age, username] = prompt_user()
 	name     = input('Name: ', 's');
 	age      = input('Age : ', 's');
 	username = input('Reddit Username: ', 's');
 
-	% format the output string
-	output = sprintf('your name is %s, you are %s years old, and your username is %s\n', name, age, username);
-
-	% print the output string
+function output = print_and_save(name, age, username)
+	output = sprintf(['your name is %s, you are %s years old, and your ', ...
+			'username is %s\n'], name, age, username);
 	fprintf('\n%s\n', output);
+	save_to_file(output);
 
-	% save the output string to a file
-	saveToFile(output);
-
-function saveToFile(output)
-	fh = fopen('info.log', 'a');
+function save_to_file(output)
+	file_path = '../trash/info.log';
+	fh = fopen(file_path, 'a');
 	fprintf(fh, output);
 	fclose(fh);
-	fprintf('Your information has been saved in the file "info.log" in the current directory\n');
+	fprintf(['Your information has been saved in the file "%s"\n'], file_path);
+
+%!assert(c001e('NAME', 'AGE', 'USERNAME'), ['your name is NAME, you are AGE years old, and your username is USERNAME', sprintf('\n')])
