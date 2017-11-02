@@ -21,9 +21,9 @@ public class c003e {
 			String encrypted_message = "";
 			for (char letter : message.toCharArray()) {
 				if (letter >= 'A' && letter <= 'Z')
-					encrypted_message += (char)((letter - 'A' + n % 26) + 'A');
+					encrypted_message += (char)(((letter - 'A' + n) % 26) + 'A');
 				else if (letter >= 'a' && letter <= 'z')
-					encrypted_message += (char)((letter - 'a' + n % 26) + 'a');
+					encrypted_message += (char)(((letter - 'a' + n) % 26) + 'a');
 				else
 					encrypted_message += letter;
 			}
