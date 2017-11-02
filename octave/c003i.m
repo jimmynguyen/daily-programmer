@@ -10,20 +10,24 @@
 %
 % Link to challenge:
 %     https://www.reddit.com/r/dailyprogrammer/comments/pkwb1/2112012_challenge_3_intermediate/
+%
+% Note:
+%     The following implementation performs a simple substitution with groups
+% of size 4:
+%     https://en.wikipedia.org/wiki/Substitution_cipher#Simple_substitution
 function encrypted_message = c003i(message, keyword)
 	GROUP_SIZE = 4;
-	alphabet = unique([upper(keyword), 'A':'Z']);
 	message = upper(message);
 	message(message < 'A' | message > 'Z') = [];
-	message = alphabet(message - 'A' + 1);
-	n = length(message);
+	alphabet = unique([upper(keyword), 'A':'Z']);
 	encrypted_message = '';
+	n = length(message);
 	for i = 1:GROUP_SIZE:n
 		j = i+GROUP_SIZE-1;
 		if j > n
 			j = n;
 		end
-		encrypted_message = [encrypted_message, message(i:j)];
+		encrypted_message = [encrypted_message, alphabet(message(i:j) - 'A' + 1)];
 		if j < n
 			encrypted_message = [encrypted_message, ' '];
 		end
