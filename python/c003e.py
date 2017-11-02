@@ -48,6 +48,7 @@ def is_integer(n):
 
 def c003e(args):
 	if len(args) < 3:
+		print('\nInvalid number of arguments')
 		print_help_menu()
 	elif args[0] not in ['-d', '-e']:
 		print('\nInvalid option "{}"'.format(args[0]))

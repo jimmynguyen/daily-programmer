@@ -44,14 +44,6 @@ public class c003e {
 				"\n                 negative n will shift left\n\n");
 	}
 
-	private static String compile_message(String[] parts) {
-		String message = "";
-		for (int i = 1; i < parts.length - 1; i++) {
-			message += parts[i] + (i == parts.length - 2 ? "" : " ");
-		}
-		return message;
-	}
-
 	private static boolean is_integer(String n) {
 		boolean integer = true;
 		try {
@@ -62,8 +54,17 @@ public class c003e {
 		return integer;
 	}
 
+	private static String compile_message(String[] parts) {
+		String message = "";
+		for (int i = 1; i < parts.length - 1; i++) {
+			message += parts[i] + (i == parts.length - 2 ? "" : " ");
+		}
+		return message;
+	}
+
 	public static void main(String[] args) {
 		if (args.length < 3) {
+			System.out.printf("\nInvalid number of arguments\n");
 			print_help_menu();
 		} else if (!Arrays.asList("-d", "-e").contains(args[0])) {
 			System.out.printf("\nInvalid option \"%s\"\n", args[0]);
