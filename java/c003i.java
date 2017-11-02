@@ -56,13 +56,12 @@ public class c003i {
 		System.out.printf(
 				"\nUsage: java c003i [message] [keyword]" +
 				"\n    [message]    message to encrypt" +
-				"\n    [keyword]    keyword for cipher" +
-				"\n\n");
+				"\n    [keyword]    keyword for cipher\n\n");
 	}
 
 	public static void main(String[] args) {
 		if (args.length < 2) {
-			System.out.printf("\nInvalid number of arguments %d\n", args.length);
+			System.out.printf("\nInvalid number of arguments \"%d\"\n", args.length);
 			print_help_menu();
 		} else {
 			String message = args[0];
