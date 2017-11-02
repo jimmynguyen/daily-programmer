@@ -2,6 +2,12 @@
 
 Solutions to challenges from [/r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/)
 
+| Key | Value        |
+| :-: | :----------- |
+| e   | easy         |
+| i   | intermediate |
+| h   | hard         |
+
 | Challenge | Octave | Java | Python | C++ |
 | :-------: | :----: | :--: | :----: | :-: |
 | [c001e](https://www.reddit.com/r/dailyprogrammer/comments/pih8x/easy_challenge_1/)         | [c001e.m](https://github.com/jimmynguyen/daily-programmer/blob/master/octave/c001e.m) | [c001e.java](https://github.com/jimmynguyen/daily-programmer/blob/master/java/c001e.java) | [c001e.py](https://github.com/jimmynguyen/daily-programmer/blob/master/python/c001e.py) | [c001e.cpp](https://github.com/jimmynguyen/daily-programmer/blob/master/c++/c001e.cpp) |
