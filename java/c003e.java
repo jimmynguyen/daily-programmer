@@ -69,7 +69,8 @@ public class c003e {
 			System.out.printf("\nInvalid option \"%s\"\n", args[0]);
 			print_help_menu();
 		} else if (!is_integer(args[args.length-1])) {
-			System.out.printf("\nInvalid n \"%s\". n must be an integer\n\n", args[2]);
+			System.out.printf("\nInvalid n \"%s\". n must be an integer\n", args[args.length-1]);
+			print_help_menu();
 		} else {
 			String ciphered_message;
 			String message = compile_message(args);
