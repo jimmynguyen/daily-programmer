@@ -27,13 +27,14 @@ def c001e():
 	print('\n' + output + '\n')
 
 	# save the output string to a file
-	saveToFile(output)
+	save_to_file(output)
 
-def saveToFile(output):
-	fh = open('info.log', 'a')
+def save_to_file(output):
+	file_path = '../trash/info.log'
+	fh = open(file_path, 'a')
 	fh.write(output)
 	fh.close()
-	print('Your information has been saved in the file "info.log" in the current directory\n')
+	print('Your information has been saved in the file "{}"\n'.format(file_path))
 
 if __name__ == '__main__':
 	c001e()

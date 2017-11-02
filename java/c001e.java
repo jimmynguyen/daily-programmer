@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public final class c001e {
+	private static final String FILE_PATH = "../trash/info.log";
 	private static Scanner scanner;
 
 	private static String input(String prompt) {
@@ -29,14 +30,14 @@ public final class c001e {
 		return scanner.nextLine();
 	}
 
-	private static void saveToFile(String output) {
+	private static void save_to_file(String output) {
 		BufferedWriter bufferedWriter = null;
 		try {
-			bufferedWriter = new BufferedWriter(new FileWriter("info.log", true));
+			bufferedWriter = new BufferedWriter(new FileWriter(FILE_PATH, true));
 			bufferedWriter.write(output);
 			bufferedWriter.newLine();
 			bufferedWriter.flush();
-			System.out.println("Your information has been saved in the file \"info.log\" in the current directory");
+			System.out.printf("Your information has been saved in the file \"%s\" in the current directory\n", FILE_PATH);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		} finally {
@@ -65,6 +66,6 @@ public final class c001e {
 		System.out.println("\n" + output + "\n");
 
 		// save the output string to a file
-		saveToFile(output);
+		save_to_file(output);
 	}
 }

@@ -38,6 +38,6 @@ function save_to_file(output)
 	fh = fopen(file_path, 'a');
 	fprintf(fh, output);
 	fclose(fh);
-	fprintf(['Your information has been saved in the file "%s"\n'], file_path);
+	fprintf('Your information has been saved in the file "%s"\n', file_path);
 
 %!assert(c001e('NAME', 'AGE', 'USERNAME'), ['your name is NAME, you are AGE years old, and your username is USERNAME', sprintf('\n')])

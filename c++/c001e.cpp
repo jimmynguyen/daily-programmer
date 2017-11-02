@@ -27,13 +27,14 @@ std::string input(std::string prompt)
 	return input;
 }
 
-void saveToFile(char* output)
+void save_to_file(char* output)
 {
 	std::ofstream file;
-	file.open("info.log", std::ios::app);
+	std::string file_path = "../trash/info.log";
+	file.open(file_path, std::ios::app);
 	file << output;
 	file.close();
-	std::cout << "Your information has been saved in the file \"info.log\" in the current directory" << std::endl;
+	std::cout << "Your information has been saved in the file \"" << file_path << "\" in the current directory" << std::endl;
 }
 
 int main(int argc, char *argv[])
@@ -51,7 +52,7 @@ int main(int argc, char *argv[])
 	std::cout << std::endl << output << std::endl;
 
 	// save the output string to a file
-	saveToFile(output);
+	save_to_file(output);
 
 	return 0;
 }
