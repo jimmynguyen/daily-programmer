@@ -45,7 +45,7 @@ class Option:
 		self.line = line
 
 def validate_file_name(args):
-	if len(args) < 2:
+	if not args:
 		raise Exception('File name missing')
 
 def validate_file(file_name):
@@ -105,7 +105,7 @@ def prompt_termination():
 
 def c002i(args):
 	validate_file_name(args)
-	paths = read_story(args[1])
+	paths = read_story(args[0])
 	greet_user()
 	is_terminate = False
 	while not is_terminate:
@@ -120,4 +120,4 @@ def c002i(args):
 		is_terminate = prompt_termination()
 
 if __name__ == '__main__':
-	c002i(sys.argv)
+	c002i(sys.argv[1:])
