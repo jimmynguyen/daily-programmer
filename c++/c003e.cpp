@@ -47,7 +47,7 @@ std::string CaesarCipher::decrypt(std::string message, int n)
 
 void print_help_menu()
 {
-	std::cout << std::endl << "Usage: python c003e.py [option] [message] [n]";
+	std::cout << std::endl << "Usage: ./a.out [option] [message] [n]";
 	std::cout << std::endl << "    [option]     -d: decrypt";
 	std::cout << std::endl << "                 -e: encrypt";
 	std::cout << std::endl << "    [message]    The message to encrypt or decrypt";

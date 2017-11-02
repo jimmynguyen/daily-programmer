@@ -20,6 +20,12 @@ import sys
 
 GROUP_SIZE = 4
 
+def print_help_menu():
+	print( \
+			'\nUsage: python c003i.py [message] [keyword]' + \
+			'\n    [message]    message to encrypt' + \
+			'\n    [keyword]    keyword for cipher\n')
+
 def unique(l):
 	s = []
 	for e in l:
@@ -46,12 +52,6 @@ def encrypt(message, keyword):
 		if j < n-1:
 			encrypted_message += ' '
 	return encrypted_message
-
-def print_help_menu():
-	print( \
-			'\nUsage: python c003i.py [message] [keyword]' + \
-			'\n    [message]    message to encrypt' + \
-			'\n    [keyword]    keyword for cipher\n')
 
 def c003i(args):
 	if len(args) < 2:

@@ -20,6 +20,13 @@
 public class c003i {
 	private final static int GROUP_SIZE = 4;
 
+	private static void print_help_menu() {
+		System.out.printf(
+				"\nUsage: java c003i [message] [keyword]" +
+				"\n    [message]    message to encrypt" +
+				"\n    [keyword]    keyword for cipher\n\n");
+	}
+
 	private static String unique(String str) {
 		String unique_str = "";
 		for (char letter : str.toCharArray())
@@ -50,13 +57,6 @@ public class c003i {
 				encrypted_message += ' ';
 		}
 		return encrypted_message;
-	}
-
-	private static void print_help_menu() {
-		System.out.printf(
-				"\nUsage: java c003i [message] [keyword]" +
-				"\n    [message]    message to encrypt" +
-				"\n    [keyword]    keyword for cipher\n\n");
 	}
 
 	public static void main(String[] args) {
