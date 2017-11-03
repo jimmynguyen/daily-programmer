@@ -22,7 +22,7 @@
 
 void print_help_menu()
 {
-	std::cout << std::endl << "Usage: java c003i [message] [keyword]";
+	std::cout << std::endl << "Usage: ./a.out [message] [keyword]";
 	std::cout << std::endl << "    [message]    message to encrypt";
 	std::cout << std::endl << "    [keyword]    keyword for cipher";
 	std::cout << std::endl << std::endl;
