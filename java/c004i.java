@@ -12,6 +12,9 @@
  * Link to challenge:
  *     https://www.reddit.com/r/dailyprogrammer/comments/pm6sq/2122012_challenge_4_intermediate/
  *
+ * Compilation:
+ *     javac c004i.java
+ *
  * Usage:
  *     java c004i -h|-help
  *         - prints the help menu
@@ -95,6 +98,9 @@ public class c004i {
 
 	private static void print_help_menu() {
 		System.out.printf(
+				"\nCompilation:" +
+				"\n    javac c004i.java" +
+				"\n" +
 				"\nUsage:" +
 				"\n    java c004i -h|-help" +
 				"\n        - prints the help menu" +
@@ -241,10 +247,8 @@ public class c004i {
 		int ndx;
 		for (Operation operation : operations) {
 			ndx = expression.indexOf(operation.symbol);
-			if (ndx != -1 && (min_ndx == null || min_ndx > ndx)) {
+			if (ndx != -1 && (min_ndx == null || min_ndx > ndx))
 				min_ndx = Integer.valueOf(ndx);
-				break;
-			}
 		}
 		if (min_ndx != null)
 			min_ndx += count;
@@ -294,16 +298,6 @@ public class c004i {
 			r_half = r_half.substring(ndx);
 		}
 		return new ValueHalfPair(value, r_half);
-	}
-
-	private static boolean is_integer(String n) {
-		boolean integer = true;
-		try {
-			Integer.parseInt(n);
-		} catch (NumberFormatException nfe) {
-			integer = false;
-		}
-		return integer;
 	}
 
 	private static String perform_operation(Operation operation, String a, String b) {
