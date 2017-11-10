@@ -11,6 +11,17 @@
 % Link to challenge:
 %     https://www.reddit.com/r/dailyprogrammer/comments/pm6sq/2122012_challenge_4_intermediate/
 %
+% Usage:
+%     help c004i
+%         - prints the help menu
+%
+%     test c004i
+%         - runs through all preset test cases and throws an error if one
+%           fails
+%
+%     c004i(expression)
+%         - computes the input mathematical expression and prints the answer
+%
 % Note:
 %     The calculator implementation below recognizes parentheses and brackets.
 % Valid mathematical operations are:
@@ -34,10 +45,6 @@
 %             1: ^
 %             2: *, /, %
 %             3: +, -
-%
-% Usage:
-%     c004i(expression)
-%         - computes the input mathematical expression and prints the answer
 function answer = c004i(expression)
 	expression = strip_all_whitespace(expression);
 	answer = compute(expression);
@@ -191,6 +198,7 @@ function answer = perform_operation(operation, a, b)
 
 %!assert(c004i('1')                 , '1'   )
 %!assert(c004i('1+1')               , '2'   )
+%!assert(c004i('2-3')               , '-1'   )
 %!assert(c004i('4+5*5')             , '29'  )
 %!assert(c004i('1+2^10')            , '1025')
 %!assert(c004i('(1+1)^10')          , '1024')

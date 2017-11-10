@@ -127,6 +127,27 @@ public class c004i {
 				"\n\n");
 	}
 
+	private static void run_tests() {
+		String[][] tests = new String[][] {
+			{"1"                 , "1"   },
+			{"1+1"               , "2"   },
+			{"2-3"               , "-1"  },
+			{"4+5*5"             , "29"  },
+			{"1+2^10"            , "1025"},
+			{"(1+1)^10"          , "1024"},
+			{"(1+1)^(5*2)"       , "1024"},
+			{"(1+-1)^(5*2)"      , "0"   },
+			{"-(1+1)^3"          , "-8"  },
+			{"-1*(2-3)+(1+-1)*-1", "1"   }
+		};
+		System.out.printf("\n==============\nRunning tests:\n==============\n");
+		String answer;
+		for (int i = 0; i < tests.length; i++) {
+			answer = c004i(tests[i][0], true);
+			assert answer.equals(tests[i][1]):tests[i][0] + " = " + tests[i][1] + "\nExpected: " + tests[i][1] + "\nActual  : " + answer;
+		}
+	}
+
 	private static String c004i(String expression, boolean is_test) {
 		String stripped_expression = strip_all_whitespace(expression);
 		String computed_expression = compute(stripped_expression);
@@ -220,8 +241,10 @@ public class c004i {
 		int ndx;
 		for (Operation operation : operations) {
 			ndx = expression.indexOf(operation.symbol);
-			if (ndx != -1 && (min_ndx == null || min_ndx > ndx))
+			if (ndx != -1 && (min_ndx == null || min_ndx > ndx)) {
 				min_ndx = Integer.valueOf(ndx);
+				break;
+			}
 		}
 		if (min_ndx != null)
 			min_ndx += count;
@@ -233,13 +256,18 @@ public class c004i {
 			, String expression
 			, int operation_ndx) {
 		String value;
-		Integer ndx = get_first_operation_index(l_half, Arrays.asList(Operation.values()));
+		Integer ndx = get_first_operation_index(reversed(l_half), Arrays.asList(Operation.values()));
+		// l_half has form "<val>" -> ndx = null
+		// l_half has form "-<val>" -> ndx = 0
+		// l_half has form "...<operator><val>" -> ndx = <index of operator>
+		// l_half has form "...<operator>-<val>" -> ndx = <index of "-">
 		if (ndx == null) {
 			value = l_half;
 			l_half = "";
 		} else {
-			value = l_half.substring(ndx+1);
-			l_half = l_half.substring(0, ndx+1);
+			ndx = l_half.length() - ndx;
+			value = l_half.substring(ndx);
+			l_half = l_half.substring(0, ndx);
 		}
 		if (operations.contains(Operation.SUBTRACTION))
 			l_half = expression.substring(0, operation_ndx - value.length());
@@ -249,6 +277,10 @@ public class c004i {
 			l_half = l_half.substring(0, l_half.length()-1);
 		}
 		return new ValueHalfPair(value, l_half);
+	}
+
+	private static String reversed(String str) {
+		return new StringBuilder(str).reverse().toString();
 	}
 
 	private static ValueHalfPair get_second_value(String r_half) {
@@ -294,26 +326,6 @@ public class c004i {
 			return String.format("%d", (int) answer);
 		else
 			return String.format("%.2f", answer);
-	}
-
-	private static void run_tests() {
-		String[][] tests = new String[][] {
-			{"1"                 , "1"   },
-			{"1+1"               , "2"   },
-			{"4+5*5"             , "29"  },
-			{"1+2^10"            , "1025"},
-			{"(1+1)^10"          , "1024"},
-			{"(1+1)^(5*2)"       , "1024"},
-			{"(1+-1)^(5*2)"      , "0"   },
-			{"-(1+1)^3"          , "-8"  },
-			{"-1*(2-3)+(1+-1)*-1", "1"   }
-		};
-		System.out.printf("\n==============\nRunning tests:\n==============\n");
-		String answer;
-		for (int i = 0; i < tests.length; i++) {
-			answer = c004i(tests[i][0], true);
-			assert answer.equals(tests[i][1]):"Assertion failed: " + tests[i][0] + " = " + tests[i][1];
-		}
 	}
 
 	public static void main(String[] args) {
