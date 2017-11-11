@@ -9,8 +9,11 @@
  * Link to challenge:
  *     https://www.reddit.com/r/dailyprogrammer/comments/pjsdx/difficult_challenge_2/
  *
+ * Compilation:
+ *     javac c002h.java
+ *
  * Usage:
- *     c002h
+ *     java c002h
  *         - launches program
  */
 import java.io.File;
