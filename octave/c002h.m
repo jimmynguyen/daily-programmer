@@ -65,8 +65,7 @@ function c002h()
 			end
 		end
 	end
-	fprintf('\n');
-	fprintf('\n');
+	fprintf('\n\n');
 
 function date_num_str = date_str(date_num)
 	date_num_str = datestr(date_num, 'mm/dd/yyyy HH:MM:SS');
@@ -78,8 +77,8 @@ function write_to_file(filename, message)
 	fprintf('\n%s', message);
 
 function prompt_user = validate_command(prompt_user, command)
-	if ~prompt_user
-		prompt_user = true;
-	else
+	if prompt_user
 		fprintf('\n> invalid command "%s". please enter a valid command:', command);
+	else
+		prompt_user = true;
 	end
