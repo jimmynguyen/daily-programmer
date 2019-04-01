@@ -22,7 +22,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public final class c001e {
-	private static final String FILE_PATH = "../trash/info.log";
+	private static final String FILE_PATH = "../../trash/info.log";
 	private static Scanner scanner;
 
 	private static String input(String prompt) {

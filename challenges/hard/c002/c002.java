@@ -27,7 +27,7 @@ import java.util.Scanner;
 
 public class c002h {
 	private final static SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
-	private final static String FILENAME = "../trash/c002h.log";
+	private final static String FILENAME = "../../trash/c002h.log";
 	private static Scanner scanner;
 
 	private static String input(String prompt) {

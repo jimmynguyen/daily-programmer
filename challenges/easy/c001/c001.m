@@ -34,7 +34,7 @@ function output = print_and_save(name, age, username)
 	save_to_file(output);
 
 function save_to_file(output)
-	file_path = '../trash/info.log';
+	file_path = '../../trash/info.log';
 	fh = fopen(file_path, 'a');
 	fprintf(fh, output);
 	fclose(fh);

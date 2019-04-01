@@ -30,7 +30,7 @@ std::string input(std::string prompt)
 void save_to_file(char* output)
 {
 	std::ofstream file;
-	std::string file_path = "../trash/info.log";
+	std::string file_path = "../../trash/info.log";
 	file.open(file_path, std::ios::app);
 	file << output;
 	file.close();

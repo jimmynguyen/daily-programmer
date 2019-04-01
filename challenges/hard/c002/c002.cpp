@@ -22,7 +22,7 @@
 #include <sstream>
 #include <sys/time.h>
 
-#define FILENAME "../trash/c002h.log"
+#define FILENAME "../../trash/c002h.log"
 
 std::string input(std::string prompt)
 {

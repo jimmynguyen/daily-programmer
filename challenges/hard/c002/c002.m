@@ -15,7 +15,7 @@
 %     c002h
 %         - launches program
 function c002h()
-	filename = '../trash/c002h.log';
+	filename = '../../trash/c002h.log';
 	fprintf('\n==================================================');
 	fprintf('\n> STOPWATCH (%s)', filename);
 	fprintf('\n==================================================');

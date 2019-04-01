@@ -30,7 +30,7 @@ def c001e():
 	save_to_file(output)
 
 def save_to_file(output):
-	file_path = '../trash/info.log'
+	file_path = '../../trash/info.log'
 	fh = open(file_path, 'a')
 	fh.write(output)
 	fh.close()

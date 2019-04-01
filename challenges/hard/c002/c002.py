@@ -13,7 +13,7 @@
 #         - launches program
 import datetime
 
-FILENAME = '../trash/c002h.log';
+FILENAME = '../../trash/c002h.log';
 
 def write_to_file(message):
 	with open(FILENAME, 'a') as file:
