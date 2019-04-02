@@ -1,0 +1,1 @@
+kotlinc c005.kt -include-runtime -d c005_kotlin.jar && java -jar c005_kotlin.jar $1

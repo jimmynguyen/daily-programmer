@@ -1,6 +1,5 @@
 *.out
 *.class
-*.sh
-*.txt
+*.jar
 octave-workspace
 trash
