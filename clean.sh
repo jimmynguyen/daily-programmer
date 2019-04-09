@@ -1,3 +1,3 @@
-rm -rf ./c++/a.out
-rm -rf ./java/*.class
-rm -rf ./octave/octave-workspace
+rm -rf ./**/**/**/*.out
+rm -rf ./**/**/**/*.class
+rm -rf ./**/**/**/octave-workspace
