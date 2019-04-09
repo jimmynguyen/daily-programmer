@@ -25,3 +25,7 @@ Solutions to challenges from [/r/dailyprogrammer](https://www.reddit.com/r/daily
 | [c005e](https://www.reddit.com/r/dailyprogrammer/comments/pnhyn/2122012_challenge_5_easy/) | [Kotlin](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/easy/c005/c005.kt) |
 | [c005i](https://www.reddit.com/r/dailyprogrammer/comments/pnhtj/2132012_challenge_5_intermediate/) | [Java](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/intermediate/c005/c005.java), [Octave](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/intermediate/c005/c005.m) |
 | [c005h](https://www.reddit.com/r/dailyprogrammer/comments/pniaw/2132012_challenge_5_difficult/) ||
+| [c006e](https://www.reddit.com/r/dailyprogrammer/comments/pp53w/2142012_challenge_6_easy/) ||
+| [c006i](https://www.reddit.com/r/dailyprogrammer/comments/pp81n/2142012_challenge_6_intermediate/) ||
+| [c006h](https://www.reddit.com/r/dailyprogrammer/comments/pp7vo/2142012_challenge_6_difficult/) ||
+| [c007e](https://www.reddit.com/r/dailyprogrammer/comments/pr2xr/2152012_challenge_7_easy/) | [Java](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/easy/c007/c007.java) |

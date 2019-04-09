@@ -1,0 +1,1 @@
+javac c007.java && java -ea c007 $1
