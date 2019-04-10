@@ -29,4 +29,5 @@ Solutions to challenges from [/r/dailyprogrammer](https://www.reddit.com/r/daily
 | [c006i](https://www.reddit.com/r/dailyprogrammer/comments/pp81n/2142012_challenge_6_intermediate/) ||
 | [c006h](https://www.reddit.com/r/dailyprogrammer/comments/pp7vo/2142012_challenge_6_difficult/) ||
 | [c007e](https://www.reddit.com/r/dailyprogrammer/comments/pr2xr/2152012_challenge_7_easy/) | [Java](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/easy/c007/c007.java) |
-| [c008e](https://www.reddit.com/r/dailyprogrammer/comments/pserp/2162012_challenge_8_easy/) | [TypeScript](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/easy/c008/c008.ts)
+| [c008e](https://www.reddit.com/r/dailyprogrammer/comments/pserp/2162012_challenge_8_easy/) | [TypeScript](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/easy/c008/c008.ts) |
+| [c009i](https://www.reddit.com/r/dailyprogrammer/comments/pu1y6/2172012_challenge_9_intermediate/) | [Go](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/intermediate/c009/c009.go) |
