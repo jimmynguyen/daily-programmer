@@ -1,0 +1,20 @@
+{
+  "name": "c008",
+  "version": "1.0.0",
+  "description": "/r/dailyprogrammer challenge #8 easy",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc c008.ts",
+    "prestart": "tsc c008.ts",
+    "start": "node c008.js",
+    "poststart": "rm -rf c008.js"
+  },
+  "author": "jimmynguyen",
+  "dependencies": {
+    "sprintf-js": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/sprintf-js": "^1.1.2",
+    "typescript": "^3.4.3"
+  }
+}
