@@ -6,7 +6,7 @@ Link to challenge:
     https://www.reddit.com/r/dailyprogrammer/comments/pu1y6/2172012_challenge_9_intermediate/
 
 Usage:
-    go run c009.go
+    go run c009i.go
 */
 package main
 
