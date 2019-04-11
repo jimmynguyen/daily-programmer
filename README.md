@@ -32,3 +32,4 @@ Solutions to challenges from [/r/dailyprogrammer](https://www.reddit.com/r/daily
 | [c008e](https://www.reddit.com/r/dailyprogrammer/comments/pserp/2162012_challenge_8_easy/) | [TypeScript](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/easy/c008e/c008e.ts) |
 | [c009i](https://www.reddit.com/r/dailyprogrammer/comments/pu1y6/2172012_challenge_9_intermediate/) | [Go](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/intermediate/c009i/c009i.go) |
 | [c009h](https://www.reddit.com/r/dailyprogrammer/comments/pu2c0/2172012_challenge_9_difficult/) | [Go](https://github.com/jimmynguyen/daily-programmer/blob/master/challenges/hard/c009h/c009h.go) |
+| [c161h](https://www.reddit.com/r/dailyprogrammer/comments/25576s/592014_challenge_161_hard_phone_network/) | [Java](https://github.com/jimmynguyen/daily-programmer/tree/master/challenges/hard/c161h/java/src/io/github/jimmynguyen/dailyprogrammer/c161h) |
