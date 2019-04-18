@@ -1,0 +1,1 @@
+kotlinc c029e.kt -include-runtime -d c029e_kotlin.jar && java -jar c029e_kotlin.jar "$@"
