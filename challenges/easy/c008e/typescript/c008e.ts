@@ -6,7 +6,10 @@
  *     https://www.reddit.com/r/dailyprogrammer/comments/pserp/2162012_challenge_8_easy/
  * 
  * Usage:
- *     see README for instructions
+ *     1. install npm dependencies
+ *         npm install
+ *     2. run program
+ *         npm start
  */
 import { sprintf } from 'sprintf-js';
 
