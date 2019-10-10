@@ -1,0 +1,1 @@
+javac c110e.java && java -ea c110e $1
