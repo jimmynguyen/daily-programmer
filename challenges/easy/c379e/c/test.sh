@@ -1,0 +1,1 @@
+clang c379e.c && ./a.out -t

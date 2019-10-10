@@ -37,4 +37,5 @@ Solutions to challenges from [/r/dailyprogrammer](https://www.reddit.com/r/daily
 | [c161e](https://www.reddit.com/r/dailyprogrammer/comments/24r50l/552014_161_easy_blackjack/) | [Java](https://github.com/jimmynguyen/daily-programmer/tree/master/challenges/easy/c161e/java/) |
 | [c161i](https://www.reddit.com/r/dailyprogrammer/comments/24ypno/572014_challenge_161_medium_appointing_workers/) | [Java](https://github.com/jimmynguyen/daily-programmer/tree/master/challenges/intermediate/c161i/java/) |
 | [c161h](https://www.reddit.com/r/dailyprogrammer/comments/25576s/592014_challenge_161_hard_phone_network/) | [Java](https://github.com/jimmynguyen/daily-programmer/tree/master/challenges/hard/c161h/java/) |
+| [c379e](https://www.reddit.com/r/dailyprogrammer/comments/cdieag/20190715_challenge_379_easy_progressive_taxation/) | [C](https://github.com/jimmynguyen/daily-programmer/tree/master/challenges/easy/c379e/c/) |
 | [c380e](https://www.reddit.com/r/dailyprogrammer/comments/cmd1hb/20190805_challenge_380_easy_smooshed_morse_code_1/) | [Python3](https://github.com/jimmynguyen/daily-programmer/tree/master/challenges/easy/c380e/python3/) |

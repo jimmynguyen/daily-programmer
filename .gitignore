@@ -1,6 +1,9 @@
 ### Repository ###
 trash
 
+### Visual Studio Code ###
+.vscode/
+
 ### OS X ###
 .DS_Store
 
